@@ -13,12 +13,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dump della struttura del database ifts
-DROP DATABASE IF EXISTS `ifts`;
-CREATE DATABASE IF NOT EXISTS `ifts` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `ifts`;
+-- Dump della struttura del database prenotazioni
+DROP DATABASE IF EXISTS `prenotazioni`;
+CREATE DATABASE IF NOT EXISTS `prenotazioni` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `prenotazioni`;
 
--- Dump della struttura di tabella ifts.citta
+-- Dump della struttura di tabella prenotazioni.citta
 DROP TABLE IF EXISTS `citta`;
 CREATE TABLE IF NOT EXISTS `citta` (
   `id_citta` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `citta` (
   KEY `id_citta` (`id_citta`)
 ) ENGINE=MyISAM AUTO_INCREMENT=351 DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella ifts.citta: 350 rows
+-- Dump dei dati della tabella prenotazioni.citta: 350 rows
 /*!40000 ALTER TABLE `citta` DISABLE KEYS */;
 INSERT INTO `citta` (`id_citta`, `citta`, `provincia_sigla`, `provincia_nome`, `regione`) VALUES
 	(1, 'Acerra', 'NA', 'Napoli', 4),
@@ -386,7 +386,7 @@ INSERT INTO `citta` (`id_citta`, `citta`, `provincia_sigla`, `provincia_nome`, `
 	(350, 'Viterbo', 'VT', 'Viterbo', 7);
 /*!40000 ALTER TABLE `citta` ENABLE KEYS */;
 
--- Dump della struttura di tabella ifts.clienti
+-- Dump della struttura di tabella prenotazioni.clienti
 DROP TABLE IF EXISTS `clienti`;
 CREATE TABLE IF NOT EXISTS `clienti` (
   `ID_cliente` int(11) NOT NULL AUTO_INCREMENT,
@@ -398,7 +398,7 @@ CREATE TABLE IF NOT EXISTS `clienti` (
   KEY `ID_cliente` (`ID_cliente`)
 ) ENGINE=MyISAM AUTO_INCREMENT=930 DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella ifts.clienti: 929 rows
+-- Dump dei dati della tabella prenotazioni.clienti: 929 rows
 /*!40000 ALTER TABLE `clienti` DISABLE KEYS */;
 INSERT INTO `clienti` (`ID_cliente`, `nome`, `cognome`, `dataNascita`, `citta`) VALUES
 	(1, 'Ada', 'Osmetti', '1964-09-19 00:00:00', 182),
@@ -1332,7 +1332,7 @@ INSERT INTO `clienti` (`ID_cliente`, `nome`, `cognome`, `dataNascita`, `citta`) 
 	(929, 'William', 'De Simone', '1979-03-21 00:00:00', 95);
 /*!40000 ALTER TABLE `clienti` ENABLE KEYS */;
 
--- Dump della struttura di tabella ifts.prenotazioni
+-- Dump della struttura di tabella prenotazioni.prenotazioni
 DROP TABLE IF EXISTS `prenotazioni`;
 CREATE TABLE IF NOT EXISTS `prenotazioni` (
   `ID_prenotazione` int(11) NOT NULL AUTO_INCREMENT,
@@ -1349,7 +1349,7 @@ CREATE TABLE IF NOT EXISTS `prenotazioni` (
   KEY `ID_prenotazione` (`ID_prenotazione`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9269 DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella ifts.prenotazioni: 9.268 rows
+-- Dump dei dati della tabella prenotazioni.prenotazioni: 9.268 rows
 /*!40000 ALTER TABLE `prenotazioni` DISABLE KEYS */;
 INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `importo`, `caparra`, `tipo_struttura`, `giorni_permanenza`, `costo_giornaliero`, `cliente`) VALUES
 	(1, '292', '2015-12-07 00:00:00', '2015-12-25 00:00:00', 128.47, 75.34, '2 Stelle', 18, 11.3228, 190),
@@ -10623,7 +10623,7 @@ INSERT INTO `prenotazioni` (`ID_prenotazione`, `camera`, `arrivo`, `partenza`, `
 	(9268, '34', '2015-03-18 00:00:00', '2015-03-31 00:00:00', 281.58, 21.76, '2 Stelle', 13, 23.3338, 295);
 /*!40000 ALTER TABLE `prenotazioni` ENABLE KEYS */;
 
--- Dump della struttura di tabella ifts.regioni
+-- Dump della struttura di tabella prenotazioni.regioni
 DROP TABLE IF EXISTS `regioni`;
 CREATE TABLE IF NOT EXISTS `regioni` (
   `ID_regione` int(11) NOT NULL AUTO_INCREMENT,
@@ -10634,7 +10634,7 @@ CREATE TABLE IF NOT EXISTS `regioni` (
   KEY `regione` (`regione`)
 ) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
--- Dump dei dati della tabella ifts.regioni: 20 rows
+-- Dump dei dati della tabella prenotazioni.regioni: 20 rows
 /*!40000 ALTER TABLE `regioni` DISABLE KEYS */;
 INSERT INTO `regioni` (`ID_regione`, `regione`, `area_geografica`) VALUES
 	(1, 'Abruzzo', 'Sud'),
